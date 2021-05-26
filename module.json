@@ -2,14 +2,9 @@
     "name": "dgr-harms-way",
     "title": "Degenesis: Rebirth - Harm's Way Adventure",
     "description": "The Harm's Way introductory adventure for the Degenesis: Rebirth System. PDF can be downloaded free at: https://degenesis.com/downloads/books/harms-way.",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "author": "Vindico9013, ClearConscious#5060, GЯΣΣDYJΛCK#2690",
-    "systems": [
-        "dgr"
-    ],
-    "scripts": [
-        "initialization.js"
-    ],
+    "systems": ["degenesis"],
     "languages": [
         {
             "lang": "en",
