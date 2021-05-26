@@ -1,0 +1,26 @@
+[
+    {
+        "_id": "R0OzsOX8X8DYZ1qP",
+        "name": "Harm's Way",
+        "type": "JournalEntry",
+        "sort": 1100000,
+        "parent": null,
+        "flags": {},
+        "sorting": "m",
+        "color": "#3b0075"
+    },
+    {
+        "_id": "vmDOiAEmBSWYADpq",
+        "name": "SCENE 1",
+        "type": "JournalEntry",
+        "sort": 500000,
+        "flags": {
+            "dgr-harms-way": {
+                "initialization-parent": "Harm's Way"
+            }
+        },
+        "parent": "R0OzsOX8X8DYZ1qP",
+        "sorting": "m",
+        "color": "#3b0075"
+    }
+]
