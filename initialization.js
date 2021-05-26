@@ -135,19 +135,19 @@ class DGRHarmsWayInitialization extends Dialog {
             let content = await game.packs.get(pack).getContent();
             for (let entity of content) {
                 if (entity.name.includes("(I)"))
-                    entity.data.folder = folderIds["SCENE 1"];
+                    entity.data.folder = journalFolderIds["SCENE 1"];
                 if (entity.name.includes("(II)"))
-                    entity.data.folder = folderIds["SCENE 2"];
+                    entity.data.folder = journalFolderIds["SCENE 2"];
                 if (entity.name.includes("(III)"))
-                    entity.data.folder = folderIds["SCENE 3"];
+                    entity.data.folder = journalFolderIds["SCENE 3"];
                 if (entity.name.includes("(IV)"))
-                    entity.data.folder = folderIds["SCENE 4"];
+                    entity.data.folder = journalFolderIds["SCENE 4"];
                 if (entity.name.includes("(V)"))
-                    entity.data.folder = folderIds["SCENE 5"];
+                    entity.data.folder = journalFolderIds["SCENE 5"];
                 if (entity.name.includes("(E)"))
-                    entity.data.folder = folderIds["EPILOGUE"];
+                    entity.data.folder = journalFolderIds["EPILOGUE"];
                 if (entity.name.includes("(H)"))
-                    entity.data.folder = folderIds["HANDOUTS"];
+                    entity.data.folder = journalFolderIds["HANDOUTS"];
             }
 
             switch (content[0].entity) {
