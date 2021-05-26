@@ -7,7 +7,7 @@
         "parent": null,
         "flags": {},
         "sorting": "m",
-        "color": "#3b0075"
+        "color": ""
     },
     {
         "_id": "vmDOiAEmBSWYADpq",
@@ -21,6 +21,104 @@
         },
         "parent": "R0OzsOX8X8DYZ1qP",
         "sorting": "m",
-        "color": "#3b0075"
+        "color": ""
+    },
+    {
+        "_id": "VpNQtNdXxiBoiaZC",
+        "name": "SCENE 2",
+        "type": "JournalEntry",
+        "sort": 500000,
+        "flags": {
+            "dgr-harms-way": {
+                "initialization-parent": "Harm's Way"
+            }
+        },
+        "parent": "RR0OzsOX8X8DYZ1qP",
+        "sorting": "m",
+        "color": ""
+    },
+    {
+        "_id": "iLIHSdvZUviZhZzc",
+        "name": "SCENE 3",
+        "type": "JournalEntry",
+        "sort": 500000,
+        "flags": {
+            "dgr-harms-way": {
+                "initialization-parent": "Harm's Way"
+            }
+        },
+        "parent": "RR0OzsOX8X8DYZ1qP",
+        "sorting": "m",
+        "color": ""
+    },
+    {
+        "_id": "eaxwwNNcMJuWcGXt",
+        "name": "SCENE 4",
+        "type": "JournalEntry",
+        "sort": 500000,
+        "flags": {
+            "dgr-harms-way": {
+                "initialization-parent": "Harm's Way"
+            }
+        },
+        "parent": "RR0OzsOX8X8DYZ1qP",
+        "sorting": "m",
+        "color": ""
+    },
+    {
+        "_id": "OYPCCBvNVwXqpHxx",
+        "name": "SCENE 5",
+        "type": "JournalEntry",
+        "sort": 500000,
+        "flags": {
+            "dgr-harms-way": {
+                "initialization-parent": "Harm's Way"
+            }
+        },
+        "parent": "RR0OzsOX8X8DYZ1qP",
+        "sorting": "m",
+        "color": ""
+    },
+    {
+        "_id": "CgdgRfZedFsIAyhC",
+        "name": "SCENE 6",
+        "type": "JournalEntry",
+        "sort": 500000,
+        "flags": {
+            "dgr-harms-way": {
+                "initialization-parent": "Harm's Way"
+            }
+        },
+        "parent": "RR0OzsOX8X8DYZ1qP",
+        "sorting": "m",
+        "color": ""
+    },
+    {
+        "_id": "EHJOJABMYYKCrIRZ",
+        "name": "EPILOGUE",
+        "type": "JournalEntry",
+        "sort": 500000,
+        "flags": {
+            "dgr-harms-way": {
+                "initialization-parent": "Harm's Way"
+            }
+        },
+        "parent": "RR0OzsOX8X8DYZ1qP",
+        "sorting": "m",
+        "color": ""
+    },
+    {
+        "_id": "JlIviEqDLHRxFRey",
+        "name": "HANDOUTS",
+        "type": "JournalEntry",
+        "sort": 500000,
+        "flags": {
+            "dgr-harms-way": {
+                "initialization-parent": "Harm's Way"
+            }
+        },
+        "parent": "RR0OzsOX8X8DYZ1qP",
+        "sorting": "m",
+        "color": ""
     }
 ]
