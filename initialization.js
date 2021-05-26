@@ -127,7 +127,7 @@ class DGRHarmsWayInitialization extends Dialog {
             "HANDOUTS",
         ];
         journalFoldersToFetchID.forEach((folder) => {
-            folderId = game.folders.getName(folder)._id;
+            let folderId = game.folders.getName(folder)._id;
             journalFolderIds[folder] = folderId;
         });
 
