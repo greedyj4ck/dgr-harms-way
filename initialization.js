@@ -112,69 +112,53 @@ class DGRHarmsWayInitialization extends Dialog {
     }
 
     async initializeEntities() {
-        let packList = [`${this.moduleKey}.dgr-harms-way-journals`];
+        let journalPack = `${this.moduleKey}.dgr-harms-way-journals`;
+        let journalPackContent = await game.packs.get(journalPack).getContent();
 
-        // Folder IDs
-        let journalFolderIds = {};
-        let journalFoldersToFetchID = [
-            "SCENE 1",
-            "SCENE 2",
-            "SCENE 3",
-            "SCENE 4",
-            "SCENE 5",
-            "SCENE 6",
-            "EPILOGUE",
-            "HANDOUTS",
-        ];
-        journalFoldersToFetchID.forEach((folder) => {
-            let folderId = game.folders.getName(folder)._id;
-            journalFolderIds[folder] = folderId;
+        journalPackContent.forEach((entity) => {
+            let entityObject = entity.toObject();
+            console.log(JSON.stringify(entityObject));
+
+            if (entityObject.name.includes("(I)"))
+                entityObject.folder = game.folders.find(
+                    (folder) => folder.name === "SCENE 1"
+                ).id;
+            if (entityObject.name.includes("(II)"))
+                entityObject.folder = game.folders.find(
+                    (folder) => folder.name === "SCENE 2"
+                ).id;
+            if (entityObject.name.includes("(III)"))
+                entityObject.folder = game.folders.find(
+                    (folder) => folder.name === "SCENE 3"
+                ).id;
+            if (entityObject.name.includes("(IV)"))
+                entityObject.folder = game.folders.find(
+                    (folder) => folder.name === "SCENE 4"
+                ).id;
+            if (entityObject.name.includes("(V)"))
+                entityObject.folder = game.folders.find(
+                    (folder) => folder.name === "SCENE 5"
+                ).id;
+            if (entityObject.name.includes("(VI)"))
+                entityObject.folder = game.folders.find(
+                    (folder) => folder.name === "SCENE 6"
+                ).id;
+            if (entityObject.name.includes("(E)"))
+                entityObject.folder = game.folders.find(
+                    (folder) => folder.name === "EPILOGUE"
+                ).id;
+            if (entityObject.name.includes("(H)"))
+                entityObject.folder = game.folders.find(
+                    (folder) => folder.name === "HANDOUTS"
+                ).id;
+            // Now create that entry
+            console.log(
+                `Creating JournalEntry ${entityObject.name} in folder ${entityObject.folder}`
+            );
+            JournalEntry.create(entityObject);
         });
 
-        for (let pack of packList) {
-            let content = await game.packs.get(pack).getContent();
-            for (let entity of content) {
-                if (entity.name.includes("(I)"))
-                    entity.data.folder = journalFolderIds["SCENE 1"];
-                if (entity.name.includes("(II)"))
-                    entity.data.folder = journalFolderIds["SCENE 2"];
-                if (entity.name.includes("(III)"))
-                    entity.data.folder = journalFolderIds["SCENE 3"];
-                if (entity.name.includes("(IV)"))
-                    entity.data.folder = journalFolderIds["SCENE 4"];
-                if (entity.name.includes("(V)"))
-                    entity.data.folder = journalFolderIds["SCENE 5"];
-                if (entity.name.includes("(E)"))
-                    entity.data.folder = journalFolderIds["EPILOGUE"];
-                if (entity.name.includes("(H)"))
-                    entity.data.folder = journalFolderIds["HANDOUTS"];
-            }
-
-            console.log(content);
-
-            switch (content[0].entity) {
-                case "Actor":
-                    ui.notifications.notify("Initializing Actors");
-                    let createdActors = await Actor.create(
-                        content.map((c) => c.data)
-                    );
-                    for (let actor of createdActors)
-                        this.actors[actor.data.name] = actor;
-                    break;
-                case "Item":
-                    ui.notifications.notify("Initializing Items");
-                    await Item.create(content.map((c) => c.data));
-                    break;
-                case "JournalEntry":
-                    ui.notifications.notify("Initializing Journals");
-                    let createdEntries = await JournalEntry.create(
-                        content.map((c) => c.data)
-                    );
-                    for (let entry of createdEntries)
-                        this.journals[entry.data.name] = entry;
-                    break;
-            }
-        }
+        // Initialise other entities (items, actors) here
     }
 
     async initializeScenes() {
