@@ -117,7 +117,6 @@ class DGRHarmsWayInitialization extends Dialog {
 
         journalPackContent.forEach((entity) => {
             let entityObject = entity.toObject();
-            console.log(JSON.stringify(entityObject));
 
             if (entityObject.name.includes("(I)"))
                 entityObject.folder = game.folders.find(
@@ -152,9 +151,6 @@ class DGRHarmsWayInitialization extends Dialog {
                     (folder) => folder.name === "HANDOUTS"
                 ).id;
             // Now create that entry
-            console.log(
-                `Creating JournalEntry ${entityObject.name} in folder ${entityObject.folder}`
-            );
             JournalEntry.create(entityObject);
         });
 
