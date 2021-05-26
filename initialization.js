@@ -150,6 +150,8 @@ class DGRHarmsWayInitialization extends Dialog {
                     entity.data.folder = journalFolderIds["HANDOUTS"];
             }
 
+            console.log(content);
+
             switch (content[0].entity) {
                 case "Actor":
                     ui.notifications.notify("Initializing Actors");
