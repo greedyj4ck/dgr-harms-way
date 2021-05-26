@@ -5,6 +5,7 @@
     "version": "0.0.1",
     "author": "Vindico9013, ClearConscious#5060, GЯΣΣDYJΛCK#2690",
     "systems": ["degenesis"],
+    "scripts": ["initialization.js"],
     "languages": [
         {
             "lang": "en",
