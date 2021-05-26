@@ -114,19 +114,42 @@ class DGRHarmsWayInitialization extends Dialog {
     async initializeEntities() {
         let packList = [`${this.moduleKey}.dgr-harms-way-journals`];
 
+        // Folder IDs
+        let journalFolderIds = {};
+        let journalFoldersToFetchID = [
+            "SCENE 1",
+            "SCENE 2",
+            "SCENE 3",
+            "SCENE 4",
+            "SCENE 5",
+            "SCENE 6",
+            "EPILOGUE",
+            "HANDOUTS",
+        ];
+        journalFoldersToFetchID.forEach((folder) => {
+            folderId = game.folders.getName(folder)._id;
+            journalFolderIds[folder] = folderId;
+        });
+
         for (let pack of packList) {
             let content = await game.packs.get(pack).getContent();
             for (let entity of content) {
-                let folder = entity.getFlag(
-                    this.moduleKey,
-                    "initialization-folder"
-                );
-                if (folder)
-                    entity.data.folder = this.folders[entity.entity][
-                        folder
-                    ].data._id;
-                entity.data.sort = entity.data.flags[this.moduleKey].sort;
+                if (entity.name.includes("(I)"))
+                    entity.data.folder = folderIds["SCENE 1"];
+                if (entity.name.includes("(II)"))
+                    entity.data.folder = folderIds["SCENE 2"];
+                if (entity.name.includes("(III)"))
+                    entity.data.folder = folderIds["SCENE 3"];
+                if (entity.name.includes("(IV)"))
+                    entity.data.folder = folderIds["SCENE 4"];
+                if (entity.name.includes("(V)"))
+                    entity.data.folder = folderIds["SCENE 5"];
+                if (entity.name.includes("(E)"))
+                    entity.data.folder = folderIds["EPILOGUE"];
+                if (entity.name.includes("(H)"))
+                    entity.data.folder = folderIds["HANDOUTS"];
             }
+
             switch (content[0].entity) {
                 case "Actor":
                     ui.notifications.notify("Initializing Actors");
