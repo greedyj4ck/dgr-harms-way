@@ -150,6 +150,11 @@ class DGRHarmsWayInitialization extends Dialog {
                 entityObject.folder = game.folders.find(
                     (folder) => folder.name === "HANDOUTS"
                 ).id;
+            if (entityObject.name.includes("(C)"))
+                entityObject.folder = game.folders.find(
+                    (folder) => folder.name === "CHARACTERS"
+                ).id;
+
             // Now create that entry
             JournalEntry.create(entityObject);
         });
