@@ -120,5 +120,19 @@
         "parent": "RR0OzsOX8X8DYZ1qP",
         "sorting": "a",
         "color": ""
+    },
+    {
+        "_id": "MPykmGMZyCpnunQU",
+        "name": "CHARACTERS",
+        "type": "JournalEntry",
+        "sort": 500000,
+        "flags": {
+            "dgr-harms-way": {
+                "initialization-parent": "Harm's Way"
+            }
+        },
+        "parent": "RR0OzsOX8X8DYZ1qP",
+        "sorting": "a",
+        "color": ""
     }
 ]
