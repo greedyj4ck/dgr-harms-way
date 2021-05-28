@@ -134,5 +134,29 @@
         "parent": "RR0OzsOX8X8DYZ1qP",
         "sorting": "a",
         "color": ""
+    },
+    {
+        "_id": "R0OzsOX8X8DYZ1qG",
+        "name": "Harm's Way",
+        "type": "Scene",
+        "sort": 1100000,
+        "parent": null,
+        "flags": {},
+        "sorting": "m",
+        "color": ""
+    },
+    {
+        "_id": "MPykmGMZyCrGpnunQU",
+        "name": "INTRODUCTION",
+        "type": "Scene",
+        "sort": 500000,
+        "flags": {
+            "dgr-harms-way": {
+                "initialization-parent": "Harm's Way"
+            }
+        },
+        "parent": "R0OzsOX8X8DYZ1qG",
+        "sorting": "a",
+        "color": ""
     }
 ]
