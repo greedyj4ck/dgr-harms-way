@@ -167,6 +167,8 @@ class DGRHarmsWayInitialization extends Dialog {
         let scenesPack = `${this.moduleKey}.dgr-harms-way-scenes`;
         let scenesPackContent = await game.packs.get(scenesPack).getContent();
 
+        console.log(scenesPackContent);
+
         scenesPackContent.forEach((entity) => {
             let entityObject = entity.toObject();
 
