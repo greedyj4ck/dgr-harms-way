@@ -176,6 +176,13 @@ class DGRHarmsWayInitialization extends Dialog {
                 entityObject.folder = game.folders.find(
                     (folder) => folder.name === "INTRODUCTION"
                 ).id;
+
+            console.log(`Creating Scene ${entityObject.name}`);
+            // Now create that scene and the thumbnail
+            Scene.create(entityObject).then(async (scene) => {
+                let thumb = await scene.createThumbnail();
+                scene.update({ thumb: thumb.thumb });
+            });
         });
     }
 }
