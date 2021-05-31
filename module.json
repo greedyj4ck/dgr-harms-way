@@ -29,6 +29,14 @@
             "module": "dgr-harms-way",
             "path": "./packs/harms-way-scenes.db",
             "entity": "Scene"
+        },
+        {
+            "name": "dgr-harms-way-actors",
+            "label": "Harm's Way Actors",
+            "system": "degenesis",
+            "module": "dgr-harms-way",
+            "path": "./packs/harms-way-actors.db",
+            "entity": "Actor"
         }
     ],
     "minimumCoreVersion": "0.8.5",
