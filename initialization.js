@@ -106,6 +106,7 @@ class DGRHarmsWayInitialization extends Dialog {
 
                     await this.initializeEntities();
                     await this.initializeScenes();
+                    await this.initializeActors();
                     resolve();
                 });
         });
@@ -197,7 +198,7 @@ class DGRHarmsWayInitialization extends Dialog {
             let entityObject = entity.toObject();
 
             entityObject.folder = game.folders.find(
-                (folder) => folder.name === "CHARACTERS"
+                (folder) => folder.name === "PREPARED CHARACTERS"
             ).id;
 
             console.log(`Creating Actor ${entityObject.name}`);
