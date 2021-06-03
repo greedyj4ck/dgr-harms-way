@@ -33,7 +33,7 @@
                 "initialization-parent": "Harm's Way"
             }
         },
-        "parent": "RR0OzsOX8X8DYZ1qP",
+        "parent": "R0OzsOX8X8DYZ1qP",
         "sorting": "a",
         "color": ""
     },
@@ -47,7 +47,7 @@
                 "initialization-parent": "Harm's Way"
             }
         },
-        "parent": "RR0OzsOX8X8DYZ1qP",
+        "parent": "R0OzsOX8X8DYZ1qP",
         "sorting": "a",
         "color": ""
     },
@@ -61,7 +61,7 @@
                 "initialization-parent": "Harm's Way"
             }
         },
-        "parent": "RR0OzsOX8X8DYZ1qP",
+        "parent": "R0OzsOX8X8DYZ1qP",
         "sorting": "a",
         "color": ""
     },
@@ -75,7 +75,7 @@
                 "initialization-parent": "Harm's Way"
             }
         },
-        "parent": "RR0OzsOX8X8DYZ1qP",
+        "parent": "R0OzsOX8X8DYZ1qP",
         "sorting": "a",
         "color": ""
     },
@@ -89,7 +89,7 @@
                 "initialization-parent": "Harm's Way"
             }
         },
-        "parent": "RR0OzsOX8X8DYZ1qP",
+        "parent": "R0OzsOX8X8DYZ1qP",
         "sorting": "a",
         "color": ""
     },
@@ -103,7 +103,7 @@
                 "initialization-parent": "Harm's Way"
             }
         },
-        "parent": "RR0OzsOX8X8DYZ1qP",
+        "parent": "R0OzsOX8X8DYZ1qP",
         "sorting": "a",
         "color": ""
     },
@@ -117,7 +117,7 @@
                 "initialization-parent": "Harm's Way"
             }
         },
-        "parent": "RR0OzsOX8X8DYZ1qP",
+        "parent": "R0OzsOX8X8DYZ1qP",
         "sorting": "a",
         "color": ""
     },
@@ -131,7 +131,7 @@
                 "initialization-parent": "Harm's Way"
             }
         },
-        "parent": "RR0OzsOX8X8DYZ1qP",
+        "parent": "R0OzsOX8X8DYZ1qP",
         "sorting": "a",
         "color": ""
     },
@@ -165,7 +165,11 @@
         "type": "Actor",
         "sort": 500000,
         "parent": null,
-        "flags": {},
+        "flags": {
+            "dgr-harms-way": {
+                "initialization-parent": "Harm's Way"
+            }
+        },
         "sorting": "a",
         "color": ""
     }
