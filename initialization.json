@@ -165,11 +165,7 @@
         "type": "Actor",
         "sort": 500000,
         "parent": null,
-        "flags": {
-            "dgr-harms-way": {
-                "initialization-parent": "Harm's Way"
-            }
-        },
+        "flags": {},
         "sorting": "a",
         "color": ""
     }
