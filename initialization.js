@@ -185,4 +185,24 @@ class DGRHarmsWayInitialization extends Dialog {
             });
         });
     }
+
+    // Init actors here
+    async initializeActors() {
+        let actorsPack = `${this.moduleKey}.dgr-harms-way-actors`;
+        let actorsPackContent = await game.packs.get(actorsPack).getContent();
+
+        console.log(actorsPackContent);
+
+        actorsPackContent.forEach((entity) => {
+            let entityObject = entity.toObject();
+
+            entityObject.folder = game.folders.find(
+                (folder) => folder.name === "CHARACTERS"
+            ).id;
+
+            console.log(`Creating Actor ${entityObject.name}`);
+
+            Actor.create(entityObject);
+        });
+    }
 }
