@@ -2,7 +2,7 @@
     "name": "dgr-harms-way",
     "title": "Degenesis: Rebirth - Harm's Way Adventure",
     "description": "The Harm's Way introductory adventure for the Degenesis: Rebirth System. PDF can be downloaded free at: https://degenesis.com/downloads/books/harms-way.",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "author": "Vindico9013, ClearConscious#5060, GЯΣΣDYJΛCK#2690",
     "systems": ["degenesis"],
     "scripts": ["initialization.js"],
@@ -42,5 +42,5 @@
     "minimumCoreVersion": "0.8.5",
     "compatibleCoreVersion": "0.8.6",
     "manifest": "https://raw.githubusercontent.com/dgr-foundry/dgr-harms-way/main/module.json",
-    "download": "https://github.com/dgr-foundry/dgr-harms-way/archive/refs/tags/0.1.2.zip"
+    "download": "https://github.com/dgr-foundry/dgr-harms-way/archive/refs/tags/0.1.3.zip"
 }
