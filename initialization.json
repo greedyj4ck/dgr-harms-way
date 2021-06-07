@@ -160,6 +160,20 @@
         "color": ""
     },
     {
+        "_id": "QlcFAkFsRMhZKcYR",
+        "name": "SCENE 1 - JUSTITIAN",
+        "type": "Scene",
+        "sort": 500000,
+        "flags": {
+            "dgr-harms-way": {
+                "initialization-parent": "Harm's Way"
+            }
+        },
+        "parent": "R0OzsOX8X8DYZ1qG",
+        "sorting": "a",
+        "color": ""
+    },
+    {
         "_id": "qlcFAkFSRmhZhcYR",
         "name": "PREPARED CHARACTERS",
         "type": "Actor",

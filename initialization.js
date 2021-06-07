@@ -177,6 +177,10 @@ class DGRHarmsWayInitialization extends Dialog {
                 entityObject.folder = game.folders.find(
                     (folder) => folder.name === "INTRODUCTION"
                 ).id;
+            if (entityObject.name.includes("(SI)"))
+                entityObject.folder = game.folders.find(
+                    (folder) => folder.name === "SCENE 1 - JUSTITIAN"
+                ).id;
 
             console.log(`Creating Scene ${entityObject.name}`);
             // Now create that scene and the thumbnail
