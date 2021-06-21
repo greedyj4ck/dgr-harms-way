@@ -181,7 +181,7 @@ class DGRHarmsWayInitialization extends Dialog {
                 entityObject.folder = game.folders.find(
                     (folder) => folder.name === "JUSTITIAN"
                 ).id;
-            if (entityObject.name.includes("(SC)"))
+            if (entityObject.name.includes("(SC"))
                 entityObject.folder = game.folders.find(
                     (folder) => folder.name === "SCENES"
                 ).id;
