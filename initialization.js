@@ -177,9 +177,13 @@ class DGRHarmsWayInitialization extends Dialog {
                 entityObject.folder = game.folders.find(
                     (folder) => folder.name === "INTRODUCTION"
                 ).id;
-            if (entityObject.name.includes("(SI)"))
+            if (entityObject.name.includes("(JUS)"))
                 entityObject.folder = game.folders.find(
-                    (folder) => folder.name === "SCENE 1 - JUSTITIAN"
+                    (folder) => folder.name === "JUSTITIAN"
+                ).id;
+            if (entityObject.name.includes("(SC)"))
+                entityObject.folder = game.folders.find(
+                    (folder) => folder.name === "SCENES"
                 ).id;
 
             console.log(`Creating Scene ${entityObject.name}`);
