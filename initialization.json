@@ -1,7 +1,7 @@
 [
     {
         "_id": "R0OzsOX8X8DYZ1qP",
-        "name": "Harm's Way",
+        "name": "HARM'S WAY",
         "type": "JournalEntry",
         "sort": 1100000,
         "parent": null,
@@ -10,134 +10,8 @@
         "color": ""
     },
     {
-        "_id": "vmDOiAEmBSWYADpq",
-        "name": "SCENE 1",
-        "type": "JournalEntry",
-        "sort": 500000,
-        "flags": {
-            "dgr-harms-way": {
-                "initialization-parent": "Harm's Way"
-            }
-        },
-        "parent": "R0OzsOX8X8DYZ1qP",
-        "sorting": "a",
-        "color": ""
-    },
-    {
-        "_id": "VpNQtNdXxiBoiaZC",
-        "name": "SCENE 2",
-        "type": "JournalEntry",
-        "sort": 500000,
-        "flags": {
-            "dgr-harms-way": {
-                "initialization-parent": "Harm's Way"
-            }
-        },
-        "parent": "R0OzsOX8X8DYZ1qP",
-        "sorting": "a",
-        "color": ""
-    },
-    {
-        "_id": "iLIHSdvZUviZhZzc",
-        "name": "SCENE 3",
-        "type": "JournalEntry",
-        "sort": 500000,
-        "flags": {
-            "dgr-harms-way": {
-                "initialization-parent": "Harm's Way"
-            }
-        },
-        "parent": "R0OzsOX8X8DYZ1qP",
-        "sorting": "a",
-        "color": ""
-    },
-    {
-        "_id": "eaxwwNNcMJuWcGXt",
-        "name": "SCENE 4",
-        "type": "JournalEntry",
-        "sort": 500000,
-        "flags": {
-            "dgr-harms-way": {
-                "initialization-parent": "Harm's Way"
-            }
-        },
-        "parent": "R0OzsOX8X8DYZ1qP",
-        "sorting": "a",
-        "color": ""
-    },
-    {
-        "_id": "OYPCCBvNVwXqpHxx",
-        "name": "SCENE 5",
-        "type": "JournalEntry",
-        "sort": 500000,
-        "flags": {
-            "dgr-harms-way": {
-                "initialization-parent": "Harm's Way"
-            }
-        },
-        "parent": "R0OzsOX8X8DYZ1qP",
-        "sorting": "a",
-        "color": ""
-    },
-    {
-        "_id": "CgdgRfZedFsIAyhC",
-        "name": "SCENE 6",
-        "type": "JournalEntry",
-        "sort": 500000,
-        "flags": {
-            "dgr-harms-way": {
-                "initialization-parent": "Harm's Way"
-            }
-        },
-        "parent": "R0OzsOX8X8DYZ1qP",
-        "sorting": "a",
-        "color": ""
-    },
-    {
-        "_id": "EHJOJABMYYKCrIRZ",
-        "name": "EPILOGUE",
-        "type": "JournalEntry",
-        "sort": 500000,
-        "flags": {
-            "dgr-harms-way": {
-                "initialization-parent": "Harm's Way"
-            }
-        },
-        "parent": "R0OzsOX8X8DYZ1qP",
-        "sorting": "a",
-        "color": ""
-    },
-    {
-        "_id": "JlIviEqDLHRxFRey",
-        "name": "HANDOUTS",
-        "type": "JournalEntry",
-        "sort": 500000,
-        "flags": {
-            "dgr-harms-way": {
-                "initialization-parent": "Harm's Way"
-            }
-        },
-        "parent": "R0OzsOX8X8DYZ1qP",
-        "sorting": "a",
-        "color": ""
-    },
-    {
-        "_id": "MPykmGMZyCpnunQU",
-        "name": "CHARACTERS",
-        "type": "JournalEntry",
-        "sort": 500000,
-        "flags": {
-            "dgr-harms-way": {
-                "initialization-parent": "Harm's Way"
-            }
-        },
-        "parent": "R0OzsOX8X8DYZ1qP",
-        "sorting": "a",
-        "color": ""
-    },
-    {
         "_id": "R0OzsOX8X8DYZ1qG",
-        "name": "Harm's Way",
+        "name": "HARM'S WAY",
         "type": "Scene",
         "sort": 1100000,
         "parent": null,
@@ -152,24 +26,9 @@
         "sort": 500000,
         "flags": {
             "dgr-harms-way": {
-                "initialization-parent": "Harm's Way"
+                "initialization-parent": "HARM'S WAY"
             }
         },
-        "parent": "R0OzsOX8X8DYZ1qG",
-        "sorting": "a",
-        "color": ""
-    },
-    {
-        "_id": "QlcFAkFsRMhZKcYR",
-        "name": "JUSTITIAN",
-        "type": "Scene",
-        "sort": 500000,
-        "flags": {
-            "dgr-harms-way": {
-                "initialization-parent": "Harm's Way"
-            }
-        },
-        "parent": "R0OzsOX8X8DYZ1qG",
         "sorting": "a",
         "color": ""
     },
@@ -180,10 +39,22 @@
         "sort": 500000,
         "flags": {
             "dgr-harms-way": {
-                "initialization-parent": "Harm's Way"
+                "initialization-parent": "HARM'S WAY"
             }
         },
-        "parent": "R0OzsOX8X8DYZ1qG",
+        "sorting": "a",
+        "color": ""
+    },
+    {
+        "_id": "QlcFAkFsRMhZKcYR",
+        "name": "JUSTITIAN",
+        "type": "Scene",
+        "sort": 500000,
+        "flags": {
+            "dgr-harms-way": {
+                "initialization-parent": "HARM'S WAY"
+            }
+        },
         "sorting": "a",
         "color": ""
     },

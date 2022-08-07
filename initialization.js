@@ -83,7 +83,9 @@ class DGRHarmsWayInitialization extends Dialog {
             fetch(`modules/${this.moduleKey}/initialization.json`)
                 .then(async (r) => r.json())
                 .then(async (json) => {
+                    
                     let createdFolders = await Folder.create(json);
+                    
                     for (let folder of createdFolders)
                         this.folders[folder.data.type][
                             folder.data.name
@@ -103,9 +105,14 @@ class DGRHarmsWayInitialization extends Dialog {
                             }
                         }
                     }
-
+                    
+                    // Initialize Journals
                     await this.initializeEntities();
+
+                    // Initialize Scenes
                     await this.initializeScenes();
+
+                     // Initialize Actors
                     await this.initializeActors();
                     resolve();
                 });
@@ -114,47 +121,15 @@ class DGRHarmsWayInitialization extends Dialog {
 
     async initializeEntities() {
         let journalPack = `${this.moduleKey}.dgr-harms-way-journals`;
-        let journalPackContent = await game.packs.get(journalPack).getDocuments();
+        let journalGamePack = await game.packs.get(journalPack).migrate()
+        let journalPackContent = await journalGamePack .getDocuments();
 
         journalPackContent.forEach((entity) => {
             let entityObject = entity.toObject();
 
-            if (entityObject.name.includes("(I)"))
-                entityObject.folder = game.folders.find(
-                    (folder) => folder.name === "SCENE 1"
-                ).id;
-            if (entityObject.name.includes("(II)"))
-                entityObject.folder = game.folders.find(
-                    (folder) => folder.name === "SCENE 2"
-                ).id;
-            if (entityObject.name.includes("(III)"))
-                entityObject.folder = game.folders.find(
-                    (folder) => folder.name === "SCENE 3"
-                ).id;
-            if (entityObject.name.includes("(IV)"))
-                entityObject.folder = game.folders.find(
-                    (folder) => folder.name === "SCENE 4"
-                ).id;
-            if (entityObject.name.includes("(V)"))
-                entityObject.folder = game.folders.find(
-                    (folder) => folder.name === "SCENE 5"
-                ).id;
-            if (entityObject.name.includes("(VI)"))
-                entityObject.folder = game.folders.find(
-                    (folder) => folder.name === "SCENE 6"
-                ).id;
-            if (entityObject.name.includes("(E)"))
-                entityObject.folder = game.folders.find(
-                    (folder) => folder.name === "EPILOGUE"
-                ).id;
-            if (entityObject.name.includes("(H)"))
-                entityObject.folder = game.folders.find(
-                    (folder) => folder.name === "HANDOUTS"
-                ).id;
-            if (entityObject.name.includes("(C)"))
-                entityObject.folder = game.folders.find(
-                    (folder) => folder.name === "CHARACTERS"
-                ).id;
+            entityObject.folder = game.folders.find(
+                (folder) => folder.name === "HARM'S WAY"
+              ).id;
 
             // Now create that entry
             JournalEntry.create(entityObject);
@@ -166,7 +141,8 @@ class DGRHarmsWayInitialization extends Dialog {
     // Init scenes here
     async initializeScenes() {
         let scenesPack = `${this.moduleKey}.dgr-harms-way-scenes`;
-        let scenesPackContent = await game.packs.get(scenesPack).getDocuments();
+        let scenesGamePack =  await game.packs.get(scenesPack).migrate()
+        let scenesPackContent = await scenesGamePack.getDocuments();
 
         console.log(scenesPackContent);
 
@@ -198,7 +174,8 @@ class DGRHarmsWayInitialization extends Dialog {
     // Init actors here
     async initializeActors() {
         let actorsPack = `${this.moduleKey}.dgr-harms-way-actors`;
-        let actorsPackContent = await game.packs.get(actorsPack).getDocuments();
+        let actorsGamePack =  await game.packs.get(actorsPack).migrate()
+        let actorsPackContent = await actorsGamePack.getDocuments();
 
         console.log(actorsPackContent);
 
@@ -215,3 +192,43 @@ class DGRHarmsWayInitialization extends Dialog {
         });
     }
 }
+
+// Helper function to merging journal files to single object
+
+function JournalMerge(foldername){
+
+    const folderName = foldername; // Change this.
+    const folder = game.folders.find(f => {
+      return (f.name === folderName) && (f.type === "JournalEntry");
+    });
+    if ( !folder ) return;
+    const sort = folder.sorting === "m"
+      ? SidebarDirectory._sortStandard
+      : SidebarDirectory._sortAlphabetical;
+    const contents = folder.contents.sort(sort);
+    const pages = contents.flatMap((entry, i) => {
+      const pages = [];
+      // Preserve sort order in the folder.
+      let sort = (i + 1) * 200_000;
+      const textPage = entry.pages.find(p => p.type === "text")?.toObject();
+      const imagePage = entry.pages.find(p => p.type === "image")?.toObject();
+      if ( textPage ) {
+        textPage.title.show = true;
+        textPage.sort = sort;
+        pages.push(textPage);
+        sort -= 100_000;
+      }
+      if ( imagePage ) {
+        imagePage.sort = sort;
+        pages.push(imagePage);
+      }
+      return pages;
+    });
+    JournalEntry.implementation.create({
+      pages,
+      name: folder.name,
+      folder: folder.folder?.id
+    });
+    };
+    
+    

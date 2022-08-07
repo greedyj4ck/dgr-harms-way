@@ -1,46 +1,73 @@
 {
-    "name": "dgr-harms-way",
-    "title": "Degenesis: Rebirth - Harm's Way Adventure",
-    "description": "The Harm's Way introductory adventure for the Degenesis: Rebirth System. PDF can be downloaded free at: https://degenesis.com/downloads/books/harms-way.",
-    "version": "0.1.5",
-    "author": "Vindico9013, ClearConscious#5060, GЯΣΣDYJΛCK#2690",
-    "systems": ["degenesis"],
-    "scripts": ["initialization.js"],
-    "languages": [
-        {
-            "lang": "en",
-            "name": "English",
-            "path": "lang/en.json"
+  "name": "dgr-harms-way",
+  "title": "Degenesis: Rebirth - Harm's Way Adventure",
+  "description": "The Harm's Way introductory adventure for the Degenesis: Rebirth System. PDF can be downloaded free at: https://degenesis.com/downloads/books/harms-way.",
+  "version": "0.1.6",
+  "relationships": {
+    "systems": [
+      {
+        "id": "degenesis",
+        "type": "system",
+        "manifest": "",
+        "compatibility": {
+          "verified": "0.5.0"
         }
-    ],
-    "packs": [
-        {
-            "name": "dgr-harms-way-journals",
-            "label": "Harm's Way Journals",
-            "system": "degenesis",
-            "module": "dgr-harms-way",
-            "path": "./packs/harms-way-journals.db",
-            "entity": "JournalEntry"
-        },
-        {
-            "name": "dgr-harms-way-scenes",
-            "label": "Harm's Way Scenes",
-            "system": "degenesis",
-            "module": "dgr-harms-way",
-            "path": "./packs/harms-way-scenes.db",
-            "entity": "Scene"
-        },
-        {
-            "name": "dgr-harms-way-actors",
-            "label": "Harm's Way Actors",
-            "system": "degenesis",
-            "module": "dgr-harms-way",
-            "path": "./packs/harms-way-actors.db",
-            "entity": "Actor"
-        }
-    ],
-    "minimumCoreVersion": "0.8.5",
-    "compatibleCoreVersion": "9",
-    "manifest": "https://raw.githubusercontent.com/greedyj4ck/dgr-harms-way/main/module.json",
-    "download": "https://github.com/greedyj4ck/dgr-harms-way/archive/refs/tags/0.1.5.zip"
+      }
+    ]
+  },
+  "compatibility": {
+    "minimum": 10,
+    "verified": "10.277"
+  },
+  "authors": [
+    {
+      "name": "Vindico",
+      "discord": "Vindico#9013"
+    },
+    {
+        "name": "ClearConscious",
+        "discord": "ClearConscious#5060"
+      },
+    {
+      "name": "Greedyj4ck",
+      "discord": "GЯΣΣDYJΛCK#2690"
+    }
+  ],
+  "scripts": ["initialization.js"],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "packs": [
+    {
+      "name": "dgr-harms-way-journals",
+      "label": "Harm's Way Journals",
+      "system": "degenesis",
+      "module": "dgr-harms-way",
+      "path": "./packs/harms-way-journals.db",
+      "type": "JournalEntry"
+    },
+    {
+      "name": "dgr-harms-way-scenes",
+      "label": "Harm's Way Scenes",
+      "system": "degenesis",
+      "module": "dgr-harms-way",
+      "path": "./packs/harms-way-scenes.db",
+      "type": "Scene"
+    },
+    {
+      "name": "dgr-harms-way-actors",
+      "label": "Harm's Way Actors",
+      "system": "degenesis",
+      "module": "dgr-harms-way",
+      "path": "./packs/harms-way-actors.db",
+      "type": "Actor"
+    }
+  ],
+
+  "manifest": "https://github.com/greedyj4ck/dgr-harms-way/releases/latest/download/module.json",
+  "download": "https://github.com/greedyj4ck/dgr-harms-way/releases/latest/download/module.zip"
 }
