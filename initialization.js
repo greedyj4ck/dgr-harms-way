@@ -87,8 +87,8 @@ class DGRHarmsWayInitialization extends Dialog {
                     let createdFolders = await Folder.create(json);
                     
                     for (let folder of createdFolders)
-                        this.folders[folder.data.type][
-                            folder.data.name
+                        this.folders[folder.type][
+                            folder.name
                         ] = folder;
 
                     for (let folderType in this.folders) {
@@ -98,7 +98,7 @@ class DGRHarmsWayInitialization extends Dialog {
                             ].getFlag(this.moduleKey, "initialization-parent");
                             if (parent) {
                                 let parentId = this.folders[folderType][parent]
-                                    .data._id;
+                                    ._id;
                                 await this.folders[folderType][folder].update({
                                     parent: parentId,
                                 });
