@@ -1,0 +1,5 @@
+2024/05/22-19:51:01.740 5554 Log #3: 80 ops saved to Table #4 OK
+2024/05/22-19:51:01.740 5554 Archiving D:\DEV\FoundryDev\Data\Data\modules\dgr-harms-way\packs\harms-way-actors/000003.log: OK
+2024/05/22-19:51:01.741 5554 Table #4: 80 entries OK
+2024/05/22-19:51:01.743 5554 Archiving D:\DEV\FoundryDev\Data\Data\modules\dgr-harms-way\packs\harms-way-actors/MANIFEST-000002: OK
+2024/05/22-19:51:01.747 5554 **** Repaired leveldb D:\DEV\FoundryDev\Data\Data\modules\dgr-harms-way\packs\harms-way-actors; recovered 1 files; 44409 bytes. Some data may have been lost. ****

@@ -1,7 +1,7 @@
 {
   "title": "Degenesis: Rebirth - Harm's Way Adventure",
   "description": "The Harm's Way introductory adventure for the Degenesis: Rebirth System. PDF can be downloaded free at: https://degenesis.com/downloads/books/harms-way.",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "relationships": {
     "systems": [
       {
@@ -9,15 +9,15 @@
         "type": "system",
         "compatibility": {
           "minimum": "0.6.0",
-          "verified": "0.6.0"
+          "verified": "0.7.0"
         }
       }
     ]
   },
   "compatibility": {
     "minimum": "11",
-    "verified": "11.305",
-    "maximum": "11"
+    "verified": "12.324",
+    "maximum": "12"
   },
   "authors": [
     {
@@ -36,9 +36,7 @@
       "flags": {}
     }
   ],
-  "scripts": [
-    "initialization.js"
-  ],
+  "scripts": ["initialization.js"],
   "languages": [
     {
       "lang": "en",
